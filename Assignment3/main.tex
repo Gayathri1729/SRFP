@@ -46,7 +46,7 @@
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
-
+\usepackage{float}
 \DeclareMathOperator*{\Res}{Res}
 
 \renewcommand\thesection{\arabic{section}}
@@ -169,26 +169,44 @@ Then,
 \begin{equation}
    f=4,l=3,t=2.5,i=4.5,g=4 
 \end{equation}
+
+Suppose $\angle FLI$=N and  $\angle TLI$=M
 Now,let
 \begin{equation}
-\vec{L}=\myvec{0\\0},\vec{I}=\myvec{4\\0},\vec{F}=\myvec{p\\q},\vec{T}=\myvec{r\\s} \label{eq8}
+   \vec{L}=\myvec{0\\0} \label{eq1}
+\end{equation}
+\begin{equation}
+    \vec{I}=\myvec{4\\0} \label{eq2}
+\end{equation}
+\begin{equation}
+     \vec{F}=\myvec{p\\q}=\myvec{i\cos N\\i\sin N} \label{eq3}
+\end{equation}
+\begin{equation}
+    \vec{T}=\myvec{r\\s}=\myvec{t\cos M\\t\sin M} \label{eq4}
 \end{equation}
 Then we know that,
 \begin{align}
-    p&=\frac{f^2+i^2-l^2}{2f}
-    =\frac{4^2+4.5^2-3^2}{2\times 4}=3.406\\
-   q&=\pm\sqrt{i^2-p^2}=\pm\sqrt{4.5^2-3.406^2}=\pm2.94\\
-   r&=\frac{t^2+f^2-g^2}{2f}
-    =\frac{2.5^2+4^2-4^2}{2\times 4}=0.781\\
-   s&=\pm\sqrt{t^2-r^2}=\pm\sqrt{2.5^2-0.781^2}=\pm2.374
+  \cos N&=\frac{f^2+i^2-l^2}{2fi}\\
+    p&=i\cos N=\frac{f^2+i^2-l^2}{2f}\\
+    &=\frac{4^2+4.5^2-3^2}{2\times 4}=3.406\\
+   \sin N&=\pm\sqrt{1-\cos^2 N}\\
+   q&=i\sin N=\pm\sqrt{i^2-i^2\cos^2 N}\\
+   &=\pm\sqrt{4.5^2-3.406^2}=\pm2.94\\
+   \cos M&=\frac{t^2+f^2-g^2}{2ft}\\
+  r&= t\cos M=\frac{t^2+f^2-g^2}{2f}\\
+    &=\frac{2.5^2+4^2-4^2}{2\times 4}=0.781\\
+     \sin M&=\pm\sqrt{1-\cos^2 M}\\
+  s&= t\sin M=\pm\sqrt{t^2-t^2\cos^2 M}\\
+   &=\pm\sqrt{2.5^2-0.781^2}=\pm2.374
 \end{align}
-Consider q and s to be positive.Then the coordinates of the quadrilateral can be obtained from \ref{eq8} ,
+Consider q and s to be positive.Then the coordinates of the quadrilateral can be obtained from \ref{eq1}, \ref{eq2}, \ref{eq3} and \ref{eq4}.
 \begin{equation}
 \vec{L}=\myvec{0\\0},\vec{I}=\myvec{4\\0},\vec{F}=\myvec{3.406\\2.94},\vec{T}=\myvec{0.781\\2.374}
 \end{equation}
 Knowing all the coordinates we can now construct the quadrilateral.
 \numberwithin{figure}{section}
-\begin{figure}[ht]
+\begin{figure}[H]
+\centering
     \includegraphics[width= \columnwidth]{quad1.png}
     \caption{Quadrilateral $LIFT$}
 \end{figure}
