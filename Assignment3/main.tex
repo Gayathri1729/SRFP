@@ -146,25 +146,62 @@ https://github.com/Gayathri1729/SRFP/tree/main/Assignment3
 \section{CONSTR-2.33}
 Construct LIFT such that $LI =4,IF =3,TL =2.5,LF =4.5,IT =4$.
 \section{Explanation}
-Given, $LI =4,IF =3,TL =2.5,LF =4.5,IT =4$.
 
+\begin{enumerate}
+    \item Assume vertices of the given quadrilateral:-
+    
+    Let the vertices of the quadrilateral $LIFT$ be $\vec{L}$,$\vec{I}$,$\vec{F}$ and $\vec{T}$ .
+    
+    \item List out given data in form of vectors:-
+    
+    Given:
+    
+    $LI=4,IF=3,TL=2.5,LF=4.5,IT=4$.
+    
+    In vector form,
+    \begin{align}
+    \norm{\vec{L}-\vec{I}} &= 4
+    \\
+    \norm{\vec{I}-\vec{F}} &= 3
+    \\
+    \norm{\vec{T}-\vec{L}} &= 2.5
+    \\
+    \norm{\vec{L}-\vec{F}} &= 4.5
+    \\
+    \norm{\vec{I}-\vec{T}} &= 4
+    \end{align}
+    
+    \item Find out two triangles of given quadrilateral having same base:
+    
+    Quadrilateral $LIFT$ is made up of two triangles $\triangle LIF$ and $\triangle LIT$ placed on base $LI$ .
+    
+\item Verify that construction of both triangles,is possible or not by using the fact that "sum of any two sides of a triangle is greater than the third side":-
+   \item[(a)]
 Consider $\triangle LIF$,
 \begin{align}
     \norm{L-I}+\norm{I-F} &=7 >\norm{L-F}\\
     \norm{I-F}+\norm{L-F} &=7.5 >\norm{L-I}\\
     \norm{L-I}+\norm{L-F} &=8.5 >\norm{I-F}
 \end{align}
-thus triangle inequality is satisfied.
+Sum of any two sides is greater than the third side in $\triangle LIF$ .
 
+ $\therefore$ Construction of $\triangle LIF$ is possible.
+\item[(b)]
 Similarly in $\triangle LIT$,
 \begin{align}
     \norm{L-I}+\norm{I-T} &=8 >\norm{L-T}\\
-    \norm{L-T}+\norm{I-T} &=6.5 >\norm{L-I}\\
+     \norm{L-T}+\norm{I-T} &=6.5 >\norm{L-I}\\
     \norm{L-I}+\norm{L-T} &=6.5 >\norm{I-T}
 \end{align}
-and triangle inequality is satisfied.
+Sum of any two sides is greater than the third side in $\triangle LIT$ .
 
-$\therefore$ the given sides form a quadrilateral.And let the sides of the triangles be denoted by $LI=f,IF=l,TL=t,LF=i,IT=g$ 
+    $\therefore$ Construction of $\triangle LIT$ is possible.
+\item Conclude that construction of quadrilateral is possible if both triangles can be constructed otherwise not possible:-
+
+$\because$ both the triangles can be constructed,we can construct the quadrilateral with the given sides.
+\item To find the coordinates of the vertices of the given quadrilateral:
+
+Let the sides of the triangles be denoted by $LI=f,IF=l,TL=t,LF=i,IT=g$ 
 Then,
 \begin{equation}
    f=4,l=3,t=2.5,i=4.5,g=4 
@@ -203,11 +240,12 @@ Consider q and s to be positive.Then the coordinates of the quadrilateral can be
 \begin{equation}
 \vec{L}=\myvec{0\\0},\vec{I}=\myvec{4\\0},\vec{F}=\myvec{3.406\\2.94},\vec{T}=\myvec{0.781\\2.374}
 \end{equation}
-Knowing all the coordinates we can now construct the quadrilateral.
+\item Knowing all the coordinates, now we can construct the quadrilateral.
 \numberwithin{figure}{section}
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
     \includegraphics[width= \columnwidth]{quad1.png}
     \caption{Quadrilateral $LIFT$}
 \end{figure}
+\end{enumerate}
 \end{document}
