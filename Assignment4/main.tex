@@ -120,24 +120,25 @@ P_2 :\myvec{1&-2&5} \vec{x}&=0
 \end{align}
 The normal vector of $P_1$ and $P_2$ are 
 \begin{equation}
- n_1=\myvec{2&1&3} \end{equation}and
+ \vec n_1=\myvec{2\\1\\3} \end{equation}and
  \begin{equation}
- n_2 =\myvec{1&-2&5},
+ \vec n_2 =\myvec{1\\-2\\5},
 \end{equation} respectively.
 
-The angle between two planes is same as the angle between their normal vectors.Let $\theta$ be the angle between $n_1$ and $n_2$.Then
+The angle between two planes is same as the angle between their normal vectors.Let $\theta$ be the angle between $\vec n_1$ and $\vec n_2$.Then
 \begin{align}
-    \cos\theta &= \frac{\vec{n_1}\cdot\vec{n_2}}{\norm {\vec{n_1}}\norm{\vec{n_2}}}\\
+    \cos\theta &= \frac{\vec{n_1^\top}\vec{n_2}}{\norm {\vec{n_1}}\norm{\vec{n_2}}}\\
     \norm{\vec{n_1}}&=\sqrt{2^2+1^2+3^2}=\sqrt{14}\\
     \norm{\vec{n_2}}&=\sqrt{1^2+(-2)^2+5^2}=\sqrt{30}\\
-    \vec{n_1}\cdot\vec{n_2}&=2\times1+1\times{-2}+3\times5=15
+   \vec{n_1^\top}\vec{n_2}&=2\times1+1\times{-2}+3\times5=15
 \end{align}
 Then,\begin{equation}
+\label{eq9}
     \cos{\theta}=\frac{15}{\sqrt{14}\sqrt{30}}=\sqrt{\frac{15}{28}}
-\end{equation} \label{eq1}
+\end{equation} 
 $\therefore$ the planes $P_1$ and $P_2$ are neither parallel nor perpendicular.
 
-From \ref{eq1}, the angle between the planes is
+From \ref{eq9}, the angle between the planes is
 \begin{align}
  \theta &=\cos^{-1}\left(\sqrt{\frac{15}{28}}\right)
    \\ &=\cos^{-1}(0.7319)=42.95\degree
