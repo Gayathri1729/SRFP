@@ -115,14 +115,21 @@ the ellipse that satisfies the given conditions:
 Foci $\myvec{0 \\ \pm \sqrt{10}}$ , passing through $\myvec{2\\3}$.
 
 \section{Solution}
-The general equation of ellipse is
+The standard equation of conic is
+\begin{equation}
+    \vec{x}^{\top}\vec{V}\vec{x}+2\vec{u}^{\top}\vec{x}+f = 1
+\end{equation}
+
+For ellipse, the equation becomes
 \begin{equation}
     \vec{x}^{\top}\vec{V}\vec{x} = 1
 \end{equation}
 where
-\begin{equation}
-    \vec{V} = \myvec{\lambda_1 & 0 \\ 0 & \lambda_2}
-\end{equation} 
+\begin{align}
+    \vec{V} &= \myvec{\lambda_1 & 0 \\ 0 & \lambda_2}\\
+    \vec{u} &= \vec{0}\\
+    f &= -1
+\end{align}
 Given the ellipse is passing through $\myvec{2\\3}$ .
 
 \begin{align}
@@ -134,11 +141,14 @@ Given the ellipse is passing through $\myvec{2\\3}$ .
 \end{equation}
 Note that $\lambda_1$ $>$ $\lambda_2$.
 
-Given the focus is $\myvec{0 \\ c}$= $\myvec{0 \\ \pm \sqrt{10}}$.Thus, the major axis of the ellipse is y-axis.
+Given the focus is $F$ = $\myvec{0 \\ c}$= $\myvec{0 \\ \pm \sqrt{10}}$.
+
+Thus, the major axis of the ellipse is y-axis.
 We know that for the ellipse whose major axis in y-axis,
-\begin{equation}
-    c^2=\frac{1}{\lambda_2}-\frac{1}{\lambda_1}
-\end{equation}
+\begin{align}
+    F &=\sqrt{\frac{ (\vec{u}^{\top} \vec{V}^{-1} \vec{u} - f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}\\
+    F &= \sqrt{\frac{\lambda_2-\lambda_1}{\lambda_1\lambda_2}}
+\end{align}
 \begin{equation}
      10=\frac{1}{\lambda_2}-\frac{1}{\lambda_1} \label{eq:7}
 \end{equation}
@@ -152,7 +162,6 @@ From (\ref{eq:7})
 \end{equation}
 \begin{align}
   \Longrightarrow  \frac{1-4\lambda_1 }{9}&=\frac{\lambda_1 }{10\lambda_1 + 1}\\
-  40\lambda_1^{2}+3\lambda_1-1&=0\\
   \lambda_1&=\frac{1}{8}
 \end{align}
 From (\ref{eq:5}),
@@ -165,7 +174,7 @@ Thus the equation of the given ellipse is
 \end{equation}
 Fig \ref{fig:1} represents the given ellipse.
 \numberwithin{figure}{section}
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
     \includegraphics[width= \columnwidth]{assignment6.png}
     \caption{Ellipse} \label{fig:1}
