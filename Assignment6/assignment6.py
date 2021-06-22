@@ -56,9 +56,9 @@ plt.plot(2,3, 'o')
 plt.text(2.2,3,'p')
  
 plt.plot(0,3.162277, 'o')
-plt.text(0,3.4,'f1')
+plt.text(0,3.4,'F')
 plt.plot(0,-3.162277, 'o')
-plt.text(0 ,-3.6,'f2')
+plt.text(0 ,-3.6,'F')
  
  
 plt.xlabel('$x$')
