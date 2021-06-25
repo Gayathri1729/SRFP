@@ -109,24 +109,80 @@ https://github.com/Gayathri1729/SRFP/tree/main/Assignment6
 \end{lstlisting}
 %
 \section{Quadratic Forms-2.74 j}
+
 In each of the following, find the equation for
 the ellipse that satisfies the given conditions:
 
 Foci $\myvec{0 \\ \pm \sqrt{10}}$ , passing through $\myvec{2\\3}$.
 
-\section{Solution}
-The standard equation of conic is
-\begin{equation}
-    \vec{x}^{\top}\vec{V}\vec{x}+2\vec{u}^{\top}\vec{x}+f = 1
-\end{equation}
 
-For ellipse, the equation becomes
+\begin{lemma}
+For ellipse,
+
+Property:
+\begin{align}
+    \abs{\vec{V}} > 0
+    \\
+    \lambda_1>0,\lambda_2<0
+\end{align}
+
+Standard Form:
+\begin{align}
+    \frac{\vec{x}^T\vec{D}\vec{x}}{\vec{u}^T\vec{V}^{-1}\vec{u}-f}=1 \label{eq1}
+\end{align}
+
+Centre:
+\begin{align}
+    \vec{c} = -\vec{V}^{-1}\vec{u}
+\end{align}
+
+Axes:
+\begin{align}
+\begin{cases}
+    \sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u}-f}{\lambda_1}}
+    \\
+    \sqrt{\frac{\vec{u}^T\vec{V}^{-1}\vec{u}-f}{\lambda_2}}
+\end{cases}
+\end{align}
+
+Focus:
+\begin{align}
+    \vec{F} &= \sqrt{\frac{(\vec{u}^T\vec{V}^{-1}\vec{u}-f)(\lambda_2-\lambda_1)}{\lambda_1\lambda_2}}
+\end{align}
+
+Focal Length:
+\begin{align}
+    \beta &= \frac{1}{2}\abs{\frac{(\vec{c}^T\vec{V}+\vec{u}^T)\vec{p}_1}{(\lambda_1+\lambda_2)}} 
+\end{align}
+
+Latus Rectum:
+\begin{align}
+    (\vec{V}\vec{c}+\vec{u})^T(\vec{x} -\beta) + \vec{u}^T\vec{c} + \vec{f} = 0
+\end{align}
+
+End points of latus rectum:
+\begin{align}
+    \vec{u}^T\kappa = -\frac{(\kappa^T\vec{V}\kappa + f )}{2}
+\end{align}
+
+Length of latus rectum:
+\begin{align}
+   l=\norm{\beta(\vec{V}\vec{c}+\vec{u})^T} 
+\end{align}
+\end{lemma}
+
+\section{Solution}
+
+The equation for the given ellipse is
 \begin{equation}
     \vec{x}^{\top}\vec{V}\vec{x} = 1
 \end{equation}
 where
 \begin{align}
-    \vec{V} &= \myvec{\lambda_1 & 0 \\ 0 & \lambda_2}\\
+    \vec{V} &= \myvec{\lambda_1 & 0 \\ 0 & \lambda_2}
+\end{align}
+Then from (\ref{eq1}),
+\begin{align}
     \vec{u} &= \vec{0}\\
     f &= -1
 \end{align}
