@@ -171,24 +171,17 @@ resulting in
 $\implies$
 The function is not convex.
 
-Consider the derivative of $p(x)$,
-\begin{equation}
-    \frac{dp(x)}{dx}= -36x-72
-\end{equation}
- Critical point is given by
-\begin{align}
-    \frac{dp(x)}{dx} &= 0 \\
-    \implies x &= -2
-\end{align}
-is the point where the profit function will be maximum.
-And the maximum profit will be $p(-2)$
-\begin{equation}
-    p(-2)=41-72(-2)-18(-2)^2=113
-\end{equation}
-\begin{align}
-   \boxed{\text{Maxima} = 113}\\
-   \boxed{\text{Maxima Point} = -2}
-\end{align}
+Using gradient ascent method we can find its maxima,
+    \begin{align}
+        x_{n+1} &= x_n + \alpha \nabla f(x_n) \\
+        \implies x_{n+1} &= x_n + \alpha \brak{-36x_n-72}
+    \end{align}
+    
+    Taking $x_0=2,\alpha=0.001$ and precision= \\ 0.00000001,values obtained using python are:
+    \begin{align}
+        \boxed{\text{Maxima} =112.99999999999876 \approx 113 }\\
+        \boxed{\text{Maxima Point} =  -1.9999997364868565\approx -2}
+    \end{align}
 
 It is clear from the Fig.\ref{p(x)}
 \numberwithin{figure}{section}
@@ -199,3 +192,4 @@ It is clear from the Fig.\ref{p(x)}
     \label{p(x)}	
 \end{figure}
 \end{document}
+
