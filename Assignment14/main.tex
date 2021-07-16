@@ -145,9 +145,9 @@ $p(x)=41-72x-18x^2$
 
 \section{SOLUTION}
 \begin{lemma}
-A function f(x) is said to be convex if following inequality is true for $\lambda \in [0,1] :$  \label{lemma1}
+A function f(x) is said to be concave if following inequality is true for $\lambda \in [0,1] :$  \label{lemma1}
 \begin{align}
-    \lambda f(x_1) + (1-\lambda)f(x_2) \geq f(\lambda x_1 + (1-\lambda)x_2)
+    \lambda f(x_1) + (1-\lambda)f(x_2) \leq f(\lambda x_1 + (1-\lambda)x_2)
 \end{align}
 \end{lemma}
 Given the profit function of the company is
@@ -158,18 +158,18 @@ Checking convexity of $p(x)$ :
 \begin{equation}
 \begin{aligned}
     &\lambda\brak{41-72{x_1}-18{x_1}^2} + 
-    (1-\lambda)\brak{41-72 {x_2}-18 {x_2}^2} \\ &\geq 
+    (1-\lambda)\brak{41-72 {x_2}-18 {x_2}^2} \\ &\leq
     \brak{41-72(\lambda x_1 + (1-\lambda)x_2)-18\brak{\lambda x_1 + (1-\lambda)x_2}^2} 
 \end{aligned}
 \end{equation}
 resulting in
 \begin{align}
-    18\lambda(\lambda - 1)({x_1} -{x_2})^2 &\geq 0\\
-    \implies \lambda(\lambda - 1)&\geq 0
-\end{align}is not true .
+    18\lambda(\lambda - 1)({x_1} -{x_2})^2 &\leq 0\\
+    \implies \lambda(\lambda - 1)&\leq 0
+\end{align}is true .
 
 $\implies$
-The function is not convex.
+The function is concave.
 
 Using gradient ascent method we can find its maxima,
     \begin{align}
