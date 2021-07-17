@@ -1,5 +1,6 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 %
+
 \usepackage{setspace}
 \usepackage{gensymb}
 \singlespacing
@@ -182,8 +183,22 @@ Using gradient ascent method we can find its maxima,
         \boxed{\text{Maxima} =112.99999999999876 \approx 113 }\\
         \boxed{\text{Maxima Point} =  -1.9999997364868565\approx -2}
     \end{align}
-
-It is clear from the Fig.\ref{p(x)}
+We can verify this by the derivative test.
+Since $p(x)$ is a concave function it has a maxima.
+\begin{align}
+\frac{dp(x)}{dx}&=-36x-72
+\end{align}
+Critical point :
+\begin{align}
+ \frac{dp(x)}{dx}&=0\\
+ -36x-72&=0\\
+ x&=-2
+\end{align} is a critical point.And since $p(x)$ is a concave function there will be a maxima at x=-2.
+And the maxima is
+\begin{align}
+p(-2)&=113
+\end{align}
+Again Fig.\ref{p(x)}  verifies this.
 \numberwithin{figure}{section}
 \begin{figure}[!ht]
     \centering
